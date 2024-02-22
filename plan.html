@@ -3,60 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Planner</title>
+    <title>Techfest Fitness Plan</title>
+    <!-- Link Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Fitness Planner</h1>
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <h1>Welcome to Techfest Fitness Plan</h1>
+        </div>
     </header>
-    <main>
-        <section id="input-section">
-            <h2>Customize Your Fitness Plan</h2>
+    <main class="container py-4">
+        <section id="input-section" class="mb-4">
+            <h2 class="mb-3">Customize Your Fitness Plan</h2>
             <form id="fitness-form">
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" class="form-control" required>
+                </div>
                 
-                <label for="workout-time">Preferred Workout Time:</label>
-                <select id="workout-time" name="workout-time">
-                    <option value="Morning">Morning (6:00 am - 9:00 am)</option>
-                    <option value="Afternoon">Afternoon (12:00 pm - 3:00 pm)</option>
-                    <option value="Evening">Evening (6:00 pm - 9:00 pm)</option>
-                </select>
+                <div class="form-group">
+                    <label for="workout-time">Preferred Workout Time:</label>
+                    <select id="workout-time" name="workout-time" class="form-control">
+                        <option value="Morning">Morning (6:00 am - 9:00 am)</option>
+                        <option value="Afternoon">Afternoon (12:00 pm - 3:00 pm)</option>
+                        <option value="Evening">Evening (6:00 pm - 9:00 pm)</option>
+                    </select>
+                </div>
                 
-                <label>Additional Activities:</label>
-                <input type="checkbox" id="yoga" name="activities" value="Yoga">
-                <label for="yoga">Yoga</label>
-                <input type="checkbox" id="swimming" name="activities" value="Swimming">
-                <label for="swimming">Swimming</label>
-                <input type="checkbox" id="sports" name="activities" value="Playing Sports">
-                <label for="sports">Playing Sports</label>
+                <div class="form-group">
+                    <label>Additional Activities:</label>
+                    <div class="form-check">
+                        <input type="checkbox" id="yoga" name="activities" value="Yoga" class="form-check-input">
+                        <label for="yoga" class="form-check-label">Yoga</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="swimming" name="activities" value="Swimming" class="form-check-input">
+                        <label for="swimming" class="form-check-label">Swimming</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="sports" name="activities" value="Playing Sports" class="form-check-input">
+                        <label for="sports" class="form-check-label">Playing Sports</label>
+                    </div>
+                </div>
                 
-                <label for="activity-days">Additional Activity Days:</label>
-                <select id="activity-days" name="activity-days" multiple>
-                    <option value="Monday">Monday</option>
-                    <option value="Tuesday">Tuesday</option>
-                    <option value="Wednesday">Wednesday</option>
-                    <option value="Thursday">Thursday</option>
-                    <option value="Friday">Friday</option>
-                    <option value="Saturday">Saturday</option>
-                    <option value="Sunday">Sunday</option>
-                </select>
+                <div class="form-group">
+                    <label for="activity-days">Additional Activity Days:</label>
+                    <select id="activity-days" name="activity-days" class="form-control" multiple>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+                </div>
                 
-                <label for="weight">Weight (kg):</label>
-                <input type="number" id="weight" name="weight" required>
+                <div class="form-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" name="weight" class="form-control" required>
+                </div>
                 
-                <label for="goals">Fitness Goals:</label>
-                <textarea id="goals" name="goals" rows="4" cols="50"></textarea>
+                <div class="form-group">
+                    <label for="goals">Fitness Goals:</label>
+                    <textarea id="goals" name="goals" rows="4" class="form-control"></textarea>
+                </div>
                 
-                <button type="submit">Generate Plan</button>
+                <button type="submit" class="btn btn-primary">Generate Plan</button>
             </form>
         </section>
         <section id="plan-section" style="display: none;">
-            <h2>Your Customized Fitness Plan</h2>
+            <h2 class="mb-3">Your Customized Fitness Plan</h2>
             <div id="fitness-plan"></div>
         </section>
     </main>
+    <!-- Link Bootstrap JS (Optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Link custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
