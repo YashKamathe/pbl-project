@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Fitness Planner</h1>
+    </header>
+    <main>
+        <section id="input-section">
+            <h2>Customize Your Fitness Plan</h2>
+            <form id="fitness-form">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+                <!-- Add other input fields for workout time preference, additional activities, weight, goals -->
+                <button type="submit">Generate Plan</button>
+            </form>
+        </section>
+        <section id="plan-section" style="display: none;">
+            <h2>Your Customized Fitness Plan</h2>
+            <div id="fitness-plan"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
