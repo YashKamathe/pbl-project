@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Plan</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Fitness Plan</h1>
+    </header>
+    <main>
+        <section id="input-section">
+            <h2>Customize Your Fitness Plan</h2>
+            <form action="/generate_plan" method="POST">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+                <!-- Add other input fields for user preferences -->
+                <button type="submit">Generate Plan</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
